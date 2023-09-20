@@ -1,0 +1,23 @@
+# swagger.yml
+
+openapi: 3.0.0
+info:
+  title: Edhelren API
+  version: 1.0.0
+
+servers:
+  - url: /api
+    description: The production API server
+  - url: /update
+    description: The update API server
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /home:
+    get: !include paths/home/get.yml

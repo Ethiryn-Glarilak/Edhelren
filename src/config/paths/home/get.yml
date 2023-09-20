@@ -1,0 +1,10 @@
+summary: Get the home page
+operationId: api.home.home
+responses:
+  '200':
+    description: The home page
+    content:
+      text/html:
+        schema:
+          type: string
+          example: Hello World!
