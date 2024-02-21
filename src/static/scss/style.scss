@@ -1,0 +1,57 @@
+body {
+    background-color: #181A1B;
+    color: white;
+    font-family: Jomhuria, sans-serif;
+    font-size: 7vh;
+    text-align: center;
+
+    .page {
+        padding: 3em 0 3em 0;
+
+        .secret_word_description {
+            font-size: 4vh;
+        }
+
+        .secret_word_content {
+            font-size: 9vh;
+        }
+
+        .page_space {
+            padding: 2em;
+        }
+
+        .telephone_image {
+            width: 3.5vh;
+        }
+
+        // quand la largeur vaut 3/2 de la hauteur
+        // affichage des deux sections en deux colonnes
+        @media (min-aspect-ratio: 3/2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+
+            font-size: 8vw;
+
+            .page_space {
+                display: none;
+            }
+
+            .secret_word_content {
+                font-size: 10vw;
+            }
+
+            .secret_word_description {
+                font-size: 5vw;
+            }
+
+            .telephone_image {
+                width: 5vw;
+            }
+        }
+    }
+}

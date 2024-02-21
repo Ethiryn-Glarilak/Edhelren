@@ -5,9 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Home - Edhelren</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jomhuria">
 </head>
 <body>
-    <h1>Edhelren</h1>
-    <p>Hello in Edhelren app.</p>
+    <div class="page">
+        <div class="secret_word_section">
+            <div class="secret_word_description">Secret word</div>
+            <div class="secret_word_content">{{ secret_word }}</div>
+        </div>
+        <div class="page_space"></div>
+        <div class ="telephone_number_section">
+            <img class="telephone_image" src="{{ url_for('static', filename='assets/images/telephone.svg') }}" alt="Telephone">
+            <div class="telephone_number">{{ telephone_number }}</div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
